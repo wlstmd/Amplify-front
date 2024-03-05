@@ -16,7 +16,7 @@ function App() {
     }
 
     try {
-      const response = await axios.get(`https://d14ik8zre67tab.cloudfront.net/costs?accountId=${accountId}`);
+      const response = await axios.get(`https://d14ik8zre67tab.cloudfront.net/api/costs?accountId=${accountId}`);
       const amount = response.data.ResultsByTime[0].Total.BlendedCost.Amount;
       const roundedAmount = parseFloat(amount).toFixed(2);
       setCost(roundedAmount);
